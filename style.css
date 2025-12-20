@@ -1,0 +1,124 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f0; /* یک سبز بسیار ملایم برای پس‌زمینه */
+    color: #2c3e50;
+    margin: 0;
+    line-height: 1.6;
+}
+@font-face{
+  src:url(font/B-NAZANIN.TTF);
+  font-family:font1;
+}
+header {
+    background: linear-gradient(135deg, #2d5a27 0%, #1e3c1a 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+.list{
+  text-align:right;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 80px;
+    padding: 20px;
+}
+
+.product-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease; /* انیمیشن نرم برای تمام تغییرات */
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* افکت شناور شدن کارت وقتی موس روی آن می‌رود */
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: #2d5a27;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* جلوگیری از کشیده شدن عکس */
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* تنظیمات سبد خرید کناری */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px; /* شروع از خارج از صفحه */
+    width: 350px;
+    height: 100%;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    transition: 0.4s; /* سرعت بیرون آمدن */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.cart-sidebar.active {
+    right: 0; /* وقتی کلاس active اضافه شد، بیاید داخل صفحه */
+}
+
+/* لایه تیره پشت سبد خرید */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* استایل دکمه‌های پایین سبد خرید */
+.cart-footer {
+    margin-top: auto;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.continue-btn { background: #eee; color: #333; }
+.checkout-btn { background: #2d5a27; color: white; }
+
+.cart-items-container {
+    overflow-y: auto;
+    margin-top: 20px;
+}

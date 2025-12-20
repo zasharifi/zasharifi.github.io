@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه گیاهان سبز</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>گیاه کده</h1>
+        <nav>
+            <ul>
+                <li class="list"><a href="#">خانه</a></li>
+                <li class="list"><a href="#">محصولات</a></li>
+                <li class="list"><a href="#">درباره ما</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="نام گیاه مورد نظر را جستجو کنید...">
+</div>
+    <main>
+        <section id="products">
+            <h2>محصولات ما</h2>
+            <div class="product-grid"></div>
+        </section>
+    </main>
+<div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>سبد خرید شما</h2>
+        <button onclick="toggleCart()" class="close-btn">&times;</button>
+    </div>
+    
+    <div id="cartItems" class="cart-items-container">
+        </div>
+
+    <div class="cart-footer">
+        <div class="total-price">
+            جمع کل: <span id="totalAmount">۰</span> تومان
+        </div>
+        <button class="btn continue-btn" onclick="toggleCart()">ادامه خرید</button>
+        <button class="btn checkout-btn" onclick="goToPayment()">تکمیل نهایی</button>
+    </div>
+</div>
+
+<div id="overlay" class="overlay" onclick="toggleCart()"></div>
+    <script src="script.js"></script>
+</body>
+</html>
