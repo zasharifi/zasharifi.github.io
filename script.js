@@ -21,10 +21,10 @@ const productGrid = document.querySelector('.product-grid');
 let cartCount = 0;
 
 // ۴. تابع نمایش محصولات در صفحه
-function displayProducts(productsToShow) {
+function displayProducts(productsToShow = plants) {
     productGrid.innerHTML = ""; // پاک کردن محتوای قبلی
 
-    plants.forEach(plant => {
+    productsToShow.forEach(plant => {
         const card = `
             <div class="product-card">
                 <img src="${plant.image}" alt="${plant.name}">
@@ -132,4 +132,5 @@ window.removeFromCart = function(index) {
     if (cart.length === 0) {
         console.log("سبد خرید خالی شد");
     }
+
 }
