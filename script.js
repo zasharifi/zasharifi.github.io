@@ -6,7 +6,7 @@ const plants = [
     { id: 4, name: "بامبو", price: "۳۲۰,۰۰۰", image: "image/4.jfif" },
     { id: 5, name: "کاکتوس", price: "۴۰,۰۰۰", image: "image/5.jpg" },
     { id: 6, name: "زاموفولیا", price: "۴۵۰,۰۰۰", image: "image/6.jfif" },
-    { id: 7, name: "شفلرا", price: "۱۲۰,۰۰۰", image: "image/.jpg" },
+    { id: 7, name: "شفلرا", price: "۱۲۰,۰۰۰", image: "image/72.jpg" },
     { id: 8, name: "بونسای", price: "۸۵۰,۰۰۰", image: "image/8.jpg" },
     { id: 9, name: "گل ارکیده", price: "۶۰۰,۰۰۰", image: "image/9.jpg" },
     { id: 10, name: "گل برگ انجیری", price: "۳۸۰,۰۰۰", image: "image/10.jpg" },
@@ -134,3 +134,4 @@ window.removeFromCart = function(index) {
     }
 
 }
+
